@@ -1,3 +1,4 @@
+// imports from Employee.js
 const Employee = require('../lib/Employee');
 
 // tests creation of employee object
