@@ -5,7 +5,7 @@ const managerHTML = function(manager) {
         <div class="card">
             <div class="card-header">
                 <h3>${manager.name}</h3>
-                <h4>Manager</h4>
+                <h4><span class="oi" data-glyph="briefcase"></span> Manager</h4>
             </div>
 
             <div class="card-body">
@@ -18,10 +18,45 @@ const managerHTML = function(manager) {
     `
 }
 
-console.log(managerHTML);
 // Engineer card HTML
+const engineerHTML = function(engineer) {
+    return `
+    <div class="col-4 mt-4">
+        <div class="card">
+            <div class="card-header">
+                <h3>${engineer.name}</h3>
+                <h4><span class="oi" data-glyph="monitor"></span> Engineer</h4>
+            </div>
+
+            <div class="card-body">
+                <p class="id">ID: ${engineer.id}</p>
+                <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+                <p class="github">GitHub: ${engineer.github}</p>
+            </div>
+        </div>
+    </div>    
+    `
+}
 
 // Intern card HTML
+const internHTML = function(intern) {
+    return `
+    <div class="col-4 mt-4">
+        <div class="card">
+            <div class="card-header">
+                <h3>${intern.name}</h3>
+                <h4><span class="oi" data-glyph="pencil"></span> Intern</h4>
+            </div>
+
+            <div class="card-body">
+                <p class="id">ID: ${intern.id}</p>
+                <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+                <p class="github">School: ${intern.school}</p>
+            </div>
+        </div>
+    </div>    
+    `
+}
 
 // join all cards for HTML body
 function generateHTML(data) {
@@ -37,6 +72,18 @@ function generateHTML(data) {
             const managerCard = managerHTML(employee);
 
             cardArray.push(managerCard);
+        }
+
+        if (role === 'Engineer') {
+            const engineerCard = engineerHTML(employee);
+
+            cardArray.push(engineerCard);
+        }
+
+        if (role === 'Intern') {
+            const internCard = internHTML(employee);
+
+            cardArray.push(internCard);
         }
     }
 

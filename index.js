@@ -111,19 +111,16 @@ const addTeamMember = () => {
             const manager = new Manager (name, id, email, officeNumber);
 
             teamArray.push(manager);
-            console.log(manager);
         } else if (teamData.role === 'Engineer') {
             const { name, id, email, github } = teamData;
             const engineer = new Engineer (name, id, email, github);
 
             teamArray.push(engineer);
-            console.log(engineer);
         } else {
             const { name, id, email, school } = teamData;
             const intern = new Intern (name, id, email, school)
 
             teamArray.push(intern);
-            console.log(intern);
         }
         if (teamData.confirmAddEmployee) {
             return addTeamMember(teamArray);
@@ -151,9 +148,6 @@ const init = () => {
     })
     .then(pageHTML => {
         return writeToFile(pageHTML);
-    })
-    .catch(err => {
-        console.log(err);
     });
 }
 

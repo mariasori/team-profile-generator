@@ -1,0 +1,36 @@
+header {
+    background-color: #e84756;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+body {
+    justify-content:  center;
+}
+
+.card {
+    width: 15rem;
+}
+
+.card-header {
+    background-color: #0077f7;
+    color: white;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+}
+
+.card-body p {
+    background-color: white;
+    border: #f8f9fa;
+    padding: 10px;
+    margin: 1px;
+}
