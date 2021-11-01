@@ -13,6 +13,7 @@ This program uses Node.js to produce an HTML page with a team profile showing in
 - [Contributions](#contributions)
 - [Tests](#tests)
 - [Questions](#questions)
+- [Video Walkthrough](#video-walkthrough) 
  
 ## Installation
 Node will need to be installed.  This file also uses Jest for testing, inquirer for the user input, and fs to create the HTML page.
@@ -34,5 +35,5 @@ Find me on GitHub: [mariasori](https://github.com/mariasori)
 <br />
 Email me with any questions: [mariasori87@gmail.com](mailto:mariasori87@gmail.com)
 
-## Video Walkthrough
+## Video-Walkthrough
 [Click here](https://watch.screencastify.com/v/nIHKW76GPHcNHnUHwIh9) to view the video walkthrough of the application.
