@@ -1,9 +1,11 @@
-const Employee = require('./lib/Employee');
+const generateHTML = require('./src/generateHTML')
+
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 const teamArray = []
 
@@ -131,4 +133,28 @@ const addTeamMember = () => {
     })
 }
 
-addTeamMember()
+const writeToFile = pageHTML => {
+    fs.writeFile('./dist/index.html', pageHTML, err => {
+        if (err) {
+            console.log(err);
+            return
+        } else { 
+            console.log('Your HTML file has been created!') 
+        }
+    })
+}
+
+const init = () => {
+    addTeamMember()
+    .then(teamArray => {
+        return generateHTML(teamArray);
+    })
+    .then(pageHTML => {
+        return writeToFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+}
+
+init();
