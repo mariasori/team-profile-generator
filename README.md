@@ -18,7 +18,7 @@ This program uses Node.js to produce an HTML page with a team profile showing in
 Node will need to be installed.  This file also uses Jest for testing, inquirer for the user input, and fs to create the HTML page.
 
 ## Usage
-This application can be used to compile team contact information and display on one page.
+This application can be used to compile team contact information and display on one page.  After user input is completed, files can be found in the dist folder.
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  This project is covered by the MIT license.
@@ -33,3 +33,6 @@ Run `npm test` to view all tests for constructors.
 Find me on GitHub: [mariasori](https://github.com/mariasori)
 <br />
 Email me with any questions: [mariasori87@gmail.com](mailto:mariasori87@gmail.com)
+
+## Video Walkthrough
+[Click here](https://watch.screencastify.com/v/nIHKW76GPHcNHnUHwIh9) to view the video walkthrough of the application.
